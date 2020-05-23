@@ -1,9 +1,15 @@
-
+//Global Variables
 var board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
 var playerOne = {};
 var playerTwo = {};
 var turn = 0;
 
+//Query Selectors
+var tableDiv = document.querySelector('#table');
+var display = document.querySelector('#display');
+
+
+//Functions
 const alert = function() {
     display.textContent = "";
     if ((turn % 2) == 0) {
@@ -40,12 +46,6 @@ function markerCheckTwo() {
     }
 };
 
-
-//Query Selectors
-var tableDiv = document.querySelector('#table');
-var display = document.querySelector('#display');
-
-//Functions
 
 var nextTurn = function() {
     turn += 1;
@@ -128,5 +128,6 @@ var render = function() {
         display.appendChild(headDisplay);
         renderWin();
     }};
-
+    
+//Run the function
 gameInit();
